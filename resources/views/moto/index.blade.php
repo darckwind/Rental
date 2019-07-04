@@ -11,7 +11,7 @@
 	</br>
    @endif
 	
-    <table class="table table-responsive">
+    <table class="table">
         <tr>
             <th>Patente</th>
             <th>Marca</th>
@@ -38,19 +38,37 @@
             @endif
 	    <td>
                 <form action="{{ route('moto.destroy',$motos->patente) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('moto.show',$motos->patente) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('moto.edit',$motos->patente) }}">Edit</a>
+			<a class="btn btn-info" href="{{ route('moto.show',$motos->patente) }}">Show</a>
+			<!--selector multiples edicion de datos-->
+			<div class="btn-group">
+  				<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    					Edit
+  				</button>
+  				<div class="dropdown-menu">
+    					<a class="dropdown-item" href="{{ route('moto.edit',$motos->patente) }}">Moto info</a>
+  				</div>
+			</div>
+                    <!--<a class="btn btn-primary" href="{{ route('moto.edit',$motos->patente) }}">Edit</a>-->
 		    <a class="btn btn-info" href="{{ route('moto.show',$motos->patente) }}">Mantencion</a>
 		    @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </td>
-	    <td class="row">
-                <a class="btn btn-info" style="margin-left:1px;" href="{{ route('moto.rvm',$motos->patente) }}">RVM</a>
-                <a class="btn btn-info" style="margin-left:1px;" href="{{ route('moto.seguro',$motos->patente) }}">Seguro</a>
-                <a class="btn btn-info" style="margin-left:1px;" href="{{ route('moto.rev',$motos->patente) }}">Rev. Tec.</a>
-                <a class="btn btn-info" style="margin-left:1px;" href="{{ route('moto.per',$motos->patente) }}">Per. Circ.</a>
+	   <!--seccion de descarga de los archivos-->
+	    <td>
+		<!-- Example single danger button -->
+		<div class="btn-group">
+  			<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    				Records
+  			</button>
+  			<div class="dropdown-menu">
+    				<a class="dropdown-item" href="{{ route('moto.rvm',$motos->patente) }}">RVM</a>
+    				<a class="dropdown-item" href="{{ route('moto.seguro',$motos->patente) }}">Seguro</a>
+    				<a class="dropdown-item" href="{{ route('moto.rev',$motos->patente) }}">Revicion Tecnica</a>
+   				<a class="dropdown-item" href="{{ route('moto.per',$motos->patente) }}">Permiso Circulacion</a>
+  			</div>
+		</div>
             </td>
         </tr>
         @endforeach
