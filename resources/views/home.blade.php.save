@@ -1,0 +1,63 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+			<p>motos en sistema</p>
+			<img src="https://img.icons8.com/ios/50/000000/dirt-bike.png">
+			{{$bikecount}}
+                </div>
+            </div>
+        </div>
+	<div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+			<p>motos arrendadas del mes</p>
+                        <img src="https://img.icons8.com/ios/50/000000/dirt-bike.png">
+                        {{$rent->count()}}
+                </div>
+            </div>
+        </div>
+	<div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                        <img src="https://img.icons8.com/ios/50/000000/dirt-bike.png">
+			<p>asdasd</p>                        
+                </div>
+            </div>
+        </div>
+	<div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                        <img src="https://img.icons8.com/ios/50/000000/dirt-bike.png">
+                        <p>coming soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</br>
+
+	<nav class="navbar navbar-dark bg-dark justify-content-between">
+  		<a class="navbar-brand" style="color:white;">Buscador</a>
+  		<form class="form-inline">
+			<select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+    			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  		</form>
+	</nav>
+
+</br>
+	{!! $calendar->calendar() !!}
+
+        {!! $calendar->script() !!}
+</div>
+
+@endsection

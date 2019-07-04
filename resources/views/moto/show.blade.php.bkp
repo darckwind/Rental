@@ -1,0 +1,66 @@
+
+@extends('moto.layout')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                <h2> datos vehiculo</h2>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-primary" href="{{ route('moto.index') }}"> Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+	    <h3>Datos RVM </h3>
+            <div class="form-group col-md-6">
+                <strong>Patente:</strong>
+                {{ $moto->patente }}
+		</br>
+                <strong>Marca:</strong>
+                {{ $moto->marca }}
+		</br>
+		<strong>Modelo:</strong>
+                {{ $moto->modelo }}
+		</br>
+		<strong>Color:</strong>
+                {{ $moto->color }}
+		</br>
+		<strong>Nro Motor:</strong>
+                {{ $moto->nro_motor }}
+		</br>
+                <strong>Nro Chasis:</strong>
+                {{ $moto->nro_chasis }}
+						
+            </div>
+		<img src="/RVM/{{ $moto->RVM }}" alt="" class="col-md-3 img-thumbnail">
+		<img src="/per_circulacion/{{ $moto->RVM }}" alt="" class="col-md-3 img-thumbnail">
+        </div>
+	<div class="col-md-12">
+            <h3>Datos Seguro </h3>
+            <div class="form-group col-md-6">
+                <strong>Poliza:</strong>
+                {{ $seguro->poliza }}
+                </br>
+                <strong>caducidad:</strong>
+                {{ $seguro->venc_seg }}
+                                                
+            </div>
+                <img src="/seguro/{{ $moto->RVM }}" alt="" class="col-md-3 img-thumbnail">
+        </div>
+	<div class="col-md-12">
+            <h3>Datos Revicion tectnica </h3>
+            <div class="form-group col-md-6">
+                <strong>Venc. Revicion:</strong>
+                {{ $rev->venc_rev }}
+            </div>
+                <img src="/rev-tec/{{ $moto->RVM }}" alt="" class="col-md-3 img-thumbnail">
+        </div>
+
+
+    </div>
+</div>
+@endsection
