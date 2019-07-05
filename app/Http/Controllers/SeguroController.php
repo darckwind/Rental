@@ -57,7 +57,7 @@ class SeguroController extends Controller
      */
     public function edit(Seguro $seguro)
     {
-        return view('seguro.edit',compact('seguro'));
+        return view('seguros.edit',compact('seguro'));
     }
 
     /**
