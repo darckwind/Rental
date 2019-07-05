@@ -47,6 +47,9 @@
                 <input type="date" class="form-control" value="{{ $seguro->venc_seg }}" name="venc_seg">
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <button type="submit" class="btn btn-block btn-primary">Submit</button>
+        </div>
     </form>
 @endsection
 
