@@ -38,37 +38,37 @@
 				</select>
 			</div>
 		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Pick Up:</label>
+			<div class="col-sm-3">
+				<input type="date" name="rent_in" class="form-control">
+			</div>
+			<label class="col-sm-2 col-form-label">Pick Up Location:</label>
+			<div class="col-sm-3">
+				<input type="text" name="location" class="form-control">
+			</div>
+		</div>
+
+
+
      		<div class="row">
 			<div class="col-sm-12">
-        			<div class="  col-md-6">
-            				<div class="form-group">
-						<strong>patente:</strong>
 
-            				</div>
-        			</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<strong>tipo de ocupacion</strong>
-						<select class="form-control" style="height: 32px;" name="arriendo">
-							<option>arriendo</option>
-							<option>mantencion</option>
-						</select>
-					</div>
-				</div>
 			</div>
 			<div class="col-sm-12 row">
         			<div class=" col-md-3">
             				<div class="form-group">
                 				<strong>Pick Up:</strong>
-                				<input type="date" name="rent_in" class="form-control">
+
             				</div>
        				</div>
 				<div class=" col-md-3">
-                                        <div class="form-group">
-                                                <strong>Pick Up Location:</strong>
-                                                <input type="text" name="location" class="form-control">
-                                        </div>
-                                </div>
+					<div class="form-group">
+						<strong>Pick Up Location:</strong>
+
+					</div>
+				</div>
 				<div class=" col-md-3">
                                         <div class="form-group">
                                                 <strong>Rent to:</strong>
