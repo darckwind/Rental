@@ -6,13 +6,13 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2> datos vehiculo</h2>
+                    <h1> datos vehiculo</h1>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">
-                        <h1>RVM Info</h1>
+                        <h2>RVM Info</h2>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -45,9 +45,7 @@
                 </br>
                 <div class="card">
                     <div class="card-header">
-                        <h1>
-                            Seguro
-                        </h1>
+                        <h2>Seguro</h2>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -67,7 +65,7 @@
                 </br>
                 <div class="card">
                 <div class="card-header">
-                    <h1>Revicion Tecnica</h1>
+                    <h2>Revicion Tecnica</h2>
                 </div>
                 <div class="card-body">
                     <div class="row">
