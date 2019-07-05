@@ -12,4 +12,7 @@ class Seguro extends Model
     protected $primaryKey = 'patente';
     public $incrementing = false;
 
+	public function moto(){
+		return $this->hasOne('App\Moto', 'patente');
+	}
 }
