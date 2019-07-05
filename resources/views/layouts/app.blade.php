@@ -40,18 +40,25 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 			@if (Auth::check())
-			<li class="nav-item dropdown">
+			    <li class="nav-item dropdown">
        				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           				Motos
     				</a>
         			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="{{ route('moto.index') }}">General view</a>
+					    <a class="dropdown-item" href="{{ route('moto.index') }}">General view</a>
           				<a class="dropdown-item" href="{{ route('moto.create') }}">Add new</a>
         			</div>
       			</li>
-			<li>
-				<a class="nav-link" href="{{ route('rent.create') }}">Arriendos</a>
-			</li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Arriendos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('rent.index') }}">General view</a>
+                        <a class="dropdown-item" href="{{ route('rent.create') }}">Add new</a>
+                    </div>
+                </li>
 			@endif
                     </ul>
 
