@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//ruta a los controladores
 
 Route::resource('moto','MotoController');
 Route::resource('rent','RentController');
