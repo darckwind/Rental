@@ -19,14 +19,6 @@
             </ul>
         </div>
     @endif
-
-
-    <form>
-
-    </form>
-
-
-
     <form action="{{ route('seguro.update',$seguro->patente) }}" method="POST">
         @csrf
         @method('PUT')
