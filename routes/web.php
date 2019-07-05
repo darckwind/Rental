@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('moto','MotoController');
 Route::resource('rent','RentController');
+Route::resource('seguro','SeguroController');
 Route::resource('mantencion','MantencionController');
 
 Route::get('moto/download/{moto}','DownloadController@getRVM')->name('moto.rvm');
