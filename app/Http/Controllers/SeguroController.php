@@ -79,8 +79,8 @@ class SeguroController extends Controller
         $seguro->update($request->all());
 
         return $request->all()+$seguro;
-        return redirect()->route('moto.index')
-            ->with('success','Seguro actuaizado');
+        //return redirect()->route('moto.index')
+        //    ->with('success','Seguro actuaizado');
     }
 
     /**
