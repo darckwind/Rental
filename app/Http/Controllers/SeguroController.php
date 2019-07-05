@@ -76,9 +76,9 @@ class SeguroController extends Controller
             'poliza' => 'required',
             'venc_seg' => 'required'
         ]);
-        $seguro->update($request->all());
 
-        return $seguro;
+
+        return $seguro->update($request->all());
         //return redirect()->route('moto.index')
         //    ->with('success','Seguro actuaizado');
     }
