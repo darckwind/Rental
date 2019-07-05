@@ -92,7 +92,7 @@ class SeguroController extends Controller
     public function destroy(Seguro $seguro)
     {
         $seguro->delete();
-	return redirect()->route('seguro.index')
+	    return redirect()->route('seguro.index')
 			->with('success','seguro eliminado');
     }
 }

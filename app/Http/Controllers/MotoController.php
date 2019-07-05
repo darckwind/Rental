@@ -127,8 +127,8 @@ class MotoController extends Controller
      */
     public function show(Moto $moto)
     {
-	$rev = Revicion::find($moto->patente);
-	$seguro = Seguro::find($moto->patente);
+	    $rev = Revicion::find($moto->patente);
+	    $seguro = Seguro::find($moto->patente);
        	return view('moto.show',compact('moto','seguro','rev'));
     }
 
