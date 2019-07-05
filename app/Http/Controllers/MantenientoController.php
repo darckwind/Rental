@@ -46,7 +46,7 @@ class MantenientoController extends Controller
      */
     public function show(Manteniento $manteniento)
     {
-        //
+        return view('mantenimiento.create',compact('manteniento'));
     }
 
     /**

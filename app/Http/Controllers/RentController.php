@@ -104,8 +104,7 @@ class RentController extends Controller
     {
         $rent->update($request->all());
 
-        return redirect()->route('rent.index')
-            ->with('success','Moto actuaizada');
+        return redirect()->route('rent.index')->with('success','Moto actuaizada');
     }
 
     /**
