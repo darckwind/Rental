@@ -65,7 +65,7 @@
                 </br>
                 <div class="card">
                 <div class="card-header">
-                    Revicion Tecnica
+                    <h1>Revicion Tecnica</h1>
                 </div>
                 <div class="card-body">
                     <div class="row">
