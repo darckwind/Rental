@@ -1,9 +1,8 @@
 
-@extends('moto.layout')
+@extends('/layouts.app')
 
 @section('content')
 
-<div class="container">
         <div class="row">
             <div class="col-md-9">
                 <div class="card">
@@ -46,9 +45,11 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-9">
-                                <p>patente</p>
-                                <p></p>
-                                <p></p>
+                                <strong>Poliza:</strong>
+                                {{ $seguro->poliza }}
+                                </br>
+                                <strong>caducidad:</strong>
+                                {{ $seguro->venc_seg }}
                             </div>
                             <div class="col-md-3">
 
@@ -122,7 +123,7 @@
 		</br>
                 <strong>Nro Chasis:</strong>
                 {{ $moto->nro_chasis }}
-						
+
             </div>
 		<img src="/RVM/{{ $moto->RVM }}" alt="" class="col-md-3 img-thumbnail">
 		<img src="/per_circulacion/{{ $moto->RVM }}" alt="" class="col-md-3 img-thumbnail">
@@ -135,7 +136,6 @@
                 </br>
                 <strong>caducidad:</strong>
                 {{ $seguro->venc_seg }}
-                                                
             </div>
                 <img src="/seguro/{{ $moto->RVM }}" alt="" class="col-md-3 img-thumbnail">
         </div>
