@@ -19,16 +19,13 @@
         </div>
     @endif
     <div class="container">
-        <form action="{{ route('rent.store') }}" method="POST">
+        <form action="{{ route('rent.update', $rent->id) }}" method="POST">
             @csrf
+            @method('PUT')
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Patente</label>
                 <div class="col-sm-3">
-                    <select name="patente" class="form-control" style="height: 32px;">
-                        @foreach ($rent as $rents)
-                            <option >{{$rents->patente}}</option>
-                        @endforeach
-                    </select>
+                    <input type="date" name="patente" class="form-control" value="{{$rent->patente}}" readonly>
                 </div>
                 <label class="col-sm-2 col-form-label">Tipo de uso</label>
                 <div class="col-sm-3">

@@ -101,7 +101,7 @@ class RentController extends Controller
      */
     public function update(Request $request, Rent $rent)
     {
-        //
+        return $request;
     }
 
     /**
