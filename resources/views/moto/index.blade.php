@@ -46,7 +46,7 @@
   				</button>
   				<div class="dropdown-menu">
 					<a class="dropdown-item" href="{{ route('moto.edit',$motos->patente) }}">Moto info</a>
-					<a class="dropdown-item" href="{{ route('seguros.edit',$motos->patente) }}">Seguro info</a>
+					<a class="dropdown-item" href="{{ route('seguro.edit',$motos->patente) }}">Seguro info</a>
   				</div>
 			</div>
                     <!--<a class="btn btn-primary" href="{{ route('moto.edit',$motos->patente) }}">Edit</a>-->
