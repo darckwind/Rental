@@ -11,7 +11,7 @@
 	</br>
    @endif
 	
-    <table class="table">
+    <table class="table table-responsive-sm">
         <tr>
             <th>Patente</th>
             <th>Marca</th>
