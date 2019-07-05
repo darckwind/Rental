@@ -69,7 +69,9 @@ class SeguroController extends Controller
      */
     public function update(Request $request, Seguro $seguro)
     {
-        return $request;
+        $seguro->update($request->all());
+        return redirect()->route('moto.index')
+            ->with('success','Seguro actuaizada');
     }
 
     /**
