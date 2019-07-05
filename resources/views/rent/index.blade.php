@@ -1,6 +1,6 @@
 @extends('/layouts.app')
  
 @section('content')
-   <p>{{$rent}}</p>
+  <p>{{$rent}}</p>
 @endsection
 
