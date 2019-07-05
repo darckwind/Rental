@@ -8,10 +8,11 @@
             <th>Patente</th>
             <th>Drop off</th>
             <th>Pick up</th>
-            <th>rent to</th>
-            <th>location</th>
-            <th>status</th>
-            <th>hotel</th>
+            <th>Rent to</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Hotel</th>
+            <th>Accion</th>
         </tr>
         @foreach ($rent as $rents)
         <tr>
@@ -22,7 +23,11 @@
             <td>{{ $rents->rent_to }}</td>
             <td>{{ $rents->location}}</td>
             <td>{{ $rents->status }}</td>
-            <td>{{ $rents->hotel }}</td>
+            @if($rents->hotel == 1)
+                <td> Si</td>
+            @else
+                <td> No</td>
+            @endif
             <td>
                 <form action="{{ route('rent.destroy',$rents->id) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('rent.show',$rents->id) }}">Edit</a>
