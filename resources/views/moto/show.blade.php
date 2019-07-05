@@ -52,7 +52,7 @@
                                 {{ $seguro->venc_seg }}
                             </div>
                             <div class="col-md-3">
-                                <img src="/seguro/{{ $moto->RVM }}" alt="" class="col-md-3 img-thumbnail">
+                                <img src="/seguro/{{ $moto->RVM }}" alt="" class="col-md-12 img-thumbnail">
                             </div>
                         </div>
                     </div>
