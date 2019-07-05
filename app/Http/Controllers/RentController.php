@@ -20,7 +20,7 @@ class RentController extends Controller
      */
     public function index()
     {
-        //
+        return view('rent.index');
     }
 
     /**
@@ -45,7 +45,7 @@ class RentController extends Controller
     public function store(Request $request)
     {
 	
-	$request->validate([
+	    $request->validate([
             'patente' => 'required',
             'rent_out' => 'required',
 	    'location'=>'required',
@@ -77,7 +77,7 @@ class RentController extends Controller
      */
     public function show(Rent $rent)
     {
-        return view('rent.show');
+        //return view('rent.show');
     }
 
     /**
@@ -88,7 +88,7 @@ class RentController extends Controller
      */
     public function edit(Rent $rent)
     {
-        //
+        return view('rent.edit',compact('rent'));
     }
 
     /**

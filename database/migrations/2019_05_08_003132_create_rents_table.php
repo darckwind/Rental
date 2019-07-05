@@ -14,16 +14,16 @@ class CreateRentsTable extends Migration
     public function up()
     {
         Schema::create('rents', function (Blueprint $table) {
-	    $table->increments('id');
+            $table->increments('id');
             $table->string('patente', 100);
             $table->foreign('patente')->references('patente')->on('motos')->onDelete('cascade');
             $table->date('rent_in');
-	    $table->date('rent_out');
-	    $table->string('rent_to')->nullable();
-	    $table->string('location');
-	    $table->string('status');
-	    $table->boolean('hotel');
-	    $table->string('title');
+            $table->date('rent_out');
+            $table->string('rent_to')->nullable();
+            $table->string('location');
+            $table->string('status');
+            $table->boolean('hotel');
+            $table->string('title');
             $table->timestamps();
         });
     }

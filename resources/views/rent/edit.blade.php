@@ -1,17 +1,13 @@
-@extends('moto.app')
-   
+@extends('/layouts.app')
+
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Moto</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('moto.index') }}"> Back</a>
+                <h2>Edit arriendo vehiculo</h2>
             </div>
         </div>
     </div>
-   
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -22,52 +18,53 @@
             </ul>
         </div>
     @endif
-  
-    <form action="{{ route('moto.update',$moto->patente) }}" method="POST">
-        @csrf
-        @method('PUT')
-   
-         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Patente:</strong>
-                    <input type="text" name="patente" value="{{ $moto->patente }}" class="form-control" placeholder="patente" readonly>
+    <div class="container">
+        <form action="{{ route('rent.store') }}" method="POST">
+            @csrf
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Patente</label>
+                <div class="col-sm-3">
+                    <select name="patente" class="form-control" style="height: 32px;">
+                        @foreach ($rent as $rents)
+                            <option >{{$rents->patente}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <label class="col-sm-2 col-form-label">Tipo de uso</label>
+                <div class="col-sm-3">
+                    <select class="form-control" style="height: 32px;" name="arriendo">
+                        <option>arriendo</option>
+                        <option>mantencion</option>
+                    </select>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Marca:</strong>
-                    <input type="text" name="marca" value="{{ $moto->marca }}" class="form-control" placeholder="marca" >
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Pick Up:</label>
+                <div class="col-sm-3">
+                    <input type="date" name="rent_in" class="form-control">
+                </div>
+                <label class="col-sm-2 col-form-label">Pick Up Location:</label>
+                <div class="col-sm-3">
+                    <input type="text" name="location" class="form-control">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Modelo:</strong>
-                    <input type="text" name="modelo" value="{{ $moto->modelo }}" class="form-control" placeholder="modelo">
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Drop Off:</label>
+                <div class="col-sm-3">
+                    <input type="date" name="rent_out" class="form-control">
+                </div>
+                <label class="col-sm-2 col-form-label">Arrendado a:</label>
+                <div class="col-sm-3">
+                    <input type="text" name="rent_to" class="form-control">
+                </div>
+                <div class="col-sm-2">
+                    <input type="checkbox" name="hotel" class="custom-control-input" id="defaultUnchecked">
+                    <label class="custom-control-label" for="defaultUnchecked">Has Hotel</label>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Color:</strong>
-                    <input type="text" name="color" value="{{ $moto->color }}" class="form-control" placeholder="color">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>nro_motor:</strong>
-                    <input type="text" name="nro_motor" value="{{ $moto->nro_motor }}" class="form-control" placeholder="nro_motor" readonly>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>nro_chasis:</strong>
-                    <input type="text" name="nro_chasis" value="{{ $moto->nro_chasis }}" class="form-control" placeholder="nro_chasis" readonly>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
-   
-    </form>
+            <button type="submit" class="btn btn-block btn-primary">Submit</button>
+        </form>
+    </div>
 @endsection
