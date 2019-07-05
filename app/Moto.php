@@ -13,7 +13,7 @@ class Moto extends Model
 
     public $incrementing = false;
     public function seguro(){
-        return $this->hasOne('App\Seguro','patente');
+        return $this->hasOne('App\Seguro');
     }
     public function revisiones(){
         return $this->hasOne('App\Revisiones','patente');

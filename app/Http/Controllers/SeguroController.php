@@ -76,10 +76,8 @@ class SeguroController extends Controller
             'poliza' => 'required',
             'venc_segu' => 'required'
         ]);
-        //$seguro->update($request->all());
-        DB::table('seguros')
-            ->where('patente', $request->input('patente'))
-            ->update(['poliza' => $request->input('poliza')], ['venc_seg' => $request->input('venc_seg')]);
+        $seguro->update($request->all());
+
 
         return redirect()->route('moto.index')
             ->with('success','Seguro actuaizado');
