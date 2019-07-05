@@ -39,6 +39,7 @@
                 <input type="date" class="form-control" value="{{ $seguro->venc_seg }}" name="venc_seg">
             </div>
         </div>
+        <input type="hidden" class="form-control" value="{{ $seguro->img_seg }}" name="img_seg">
         <button type="submit" class="btn btn-block btn-primary">Submit</button>
     </form>
 @endsection
