@@ -4,6 +4,11 @@
 @section('content')
 
         <div class="row">
+            <div class="col-lg-12 margin-tb">
+                <div class="pull-left">
+                    <h2> datos vehiculo</h2>
+                </div>
+            </div>
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">
