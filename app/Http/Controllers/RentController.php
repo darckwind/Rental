@@ -20,7 +20,8 @@ class RentController extends Controller
      */
     public function index()
     {
-        return view('rent.index');
+        $rent= Rent::all();
+        return view('rent.index',compact($rent));
     }
 
     /**
