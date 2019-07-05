@@ -70,14 +70,13 @@ class SeguroController extends Controller
     public function update(Request $request, Seguro $seguro)
     {
         $request->validate([
+            'patente' => 'required',
             'poliza' => 'required',
             'venc_seg' => 'required'
         ]);
-
         $seguro->update($request->all());
-
         return redirect()->route('moto.index')
-            ->with('success',$request);
+            ->with('success','Seguro actuaizado');
     }
 
     /**
