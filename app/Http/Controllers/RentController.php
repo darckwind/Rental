@@ -30,10 +30,10 @@ class RentController extends Controller
      */
     public function create()
     {
-	$rent = DB::table('motos')
-                ->select('motos.patente')
-                ->get();
-	 return view('rent.create',compact('rent'));
+        $rent = DB::table('motos')
+                    ->select('motos.patente')
+                    ->get();
+        return view('rent.create',compact('rent'));
     }
 
     /**
@@ -55,18 +55,18 @@ class RentController extends Controller
         $rent->patente = $request->input('patente');
         $rent->rent_in = $request->input('rent_in');
         $rent->rent_out = date('Y-m-j' ,strtotime ( '+3 day' ,strtotime($request->input('rent_out'))));
-  	$rent->rent_to = $request->input('rent_to');
-	$rent->location = $request->input('location');
-	$rent->status = $request->input('arriendo');
-	$rent->title = $request->input('patente');
-	if($request->hotel){ 
-           $hotel = 1;
-        }else{ 
-           $hotel =0;
-        }
-	$rent->hotel = $hotel;
-        $rent->save();
-        return redirect()->route('home');
+  	    $rent->rent_to = $request->input('rent_to');
+        $rent->location = $request->input('location');
+        $rent->status = $request->input('arriendo');
+        $rent->title = $request->input('patente');
+        if($request->hotel){
+               $hotel = 1;
+            }else{
+               $hotel =0;
+            }
+        $rent->hotel = $hotel;
+            $rent->save();
+            return redirect()->route('home');
     }
 
     /**
@@ -77,7 +77,7 @@ class RentController extends Controller
      */
     public function show(Rent $rent)
     {
-        //
+        return view('rent.show');
     }
 
     /**
