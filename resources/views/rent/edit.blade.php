@@ -25,7 +25,7 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Patente</label>
                 <div class="col-sm-3">
-                    <input type="date" name="patente" class="form-control" value="{{$rent->patente}}" readonly>
+                    <input type="text" name="patente" class="form-control" value="{{$rent->patente}}" readonly>
                 </div>
                 <label class="col-sm-2 col-form-label">Tipo de uso</label>
                 <div class="col-sm-3">
