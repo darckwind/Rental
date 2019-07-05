@@ -49,7 +49,7 @@
 					<a class="dropdown-item" href="{{ route('seguro.edit',$motos->patente) }}">Seguro info</a>
   				</div>
 			</div>
-		    <a class="btn btn-info" href="{{ route('mantenimeinto.show',$motos->patente) }}">Mantencion</a>
+		    <a class="btn btn-info" href="{{ route('mantenimiento.show',$motos->patente) }}">Mantencion</a>
 		    @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Delete</button>
