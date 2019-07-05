@@ -51,28 +51,18 @@
 		</div>
 
 		<div class="form-group row">
-			<label class="col-sm-2 col-form-label">Arrendado a:</label>
-			<div class="col-sm-3">
-				<input type="text" name="rent_to" class="form-control">
-			</div>
 			<label class="col-sm-2 col-form-label">Drop Off:</label>
 			<div class="col-sm-3">
 				<input type="date" name="rent_out" class="form-control">
 			</div>
-		</div>
-
-			<div class="col-md-12">
-				<div class=" col-md-3">
-                                        <div class="form-group">
-                                                <input type="checkbox" name="hotel" class="custom-control-input" id="defaultUnchecked">
-    						<label class="custom-control-label" for="defaultUnchecked">Has Hotel</label>
-                                        </div>
-                                </div>
+			<label class="col-sm-2 col-form-label">Arrendado a:</label>
+			<div class="col-sm-3">
+				<input type="text" name="rent_to" class="form-control">
 			</div>
-        		<div class="col-md-12 text-center">
+			<label class="col-sm-2 col-form-label">Tiene hotel:</label>
+			<input type="checkbox" name="hotel" class="custom-control-input" id="defaultUnchecked">
+		</div>
                 		<button type="submit" class="btn btn-block btn-primary">Submit</button>
-        		</div>
-    		</div>
 	</form>
 </div>
 @endsection
