@@ -74,8 +74,7 @@ class SeguroController extends Controller
         $request->validate([
             'patente' => 'required',
             'poliza' => 'required',
-            'venc_seg' => 'required',
-            'img_seg'=>'required'
+            'venc_seg' => 'required'
         ]);
         $seguro->update($request->all());
         return redirect()->route('moto.index')
