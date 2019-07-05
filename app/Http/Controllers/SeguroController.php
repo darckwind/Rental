@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Seguro;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Collection;
 
 class SeguroController extends Controller
 {
@@ -74,7 +76,11 @@ class SeguroController extends Controller
             'poliza' => 'required',
             'venc_seg' => 'required'
         ]);
-        $seguro->update($request->all());
+        //$seguro->update($request->all());
+        DB::table('seguros')
+            ->where('patente', $request->input('patente'))
+            ->update(['poliza' => $request->input('poliza')], ['venc_seg' => $request->input('venc_seg')]);
+
         return redirect()->route('moto.index')
             ->with('success','Seguro actuaizado');
     }
