@@ -23,7 +23,7 @@
     <form action="{{ route('seguro.update',$seguro->patente) }}" method="POST">
         @csrf
         @method('PUT')
-
+        <input type="text" name="patente" value="{{ $seguro->patente }}" class="form-control" placeholder="patente" readonly>
         <p>{{$seguro}}</p>
 
     </form>
