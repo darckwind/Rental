@@ -13,6 +13,6 @@ class Seguro extends Model
     public $incrementing = false;
 
 	public function moto(){
-		return $this->hasOne('App\Moto', 'patente');
+		return $this->belongsTo('App\Moto');
 	}
 }
