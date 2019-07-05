@@ -21,7 +21,7 @@
             <th>Accion</th>
 			<th>Descargas</th>
         </tr>
-        @foreach ($moto as $motos)
+
         <tr>
             <td>{{ $motos->patente }}</td>
             <td>{{ $motos->marca }}</td>
