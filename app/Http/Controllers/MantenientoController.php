@@ -84,6 +84,6 @@ class MantenientoController extends Controller
     }
 
     public  function customCreate(Request $request){
-        return view('mantenimiento.create',compact('request'));
+        return $request;
     }
 }
