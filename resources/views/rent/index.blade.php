@@ -30,7 +30,7 @@
             @endif
             <td>
                 <form action="{{ route('rent.destroy',$rents->id) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('rent.show',$rents->id) }}">Edit</a>
+                    <a class="btn btn-info" href="{{ route('rent.edit',$rents->id) }}">Edit</a>
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Delete</button>
