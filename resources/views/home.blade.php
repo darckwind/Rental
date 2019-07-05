@@ -24,7 +24,8 @@
     </div>
 </br>
 
-	<nav class="navbar navbar-dark bg-dark justify-content-between">
+	<!-- suspencion del servicio de busqueda
+		<nav class="navbar navbar-dark bg-dark justify-content-between">
   		<a class="navbar-brand" style="color:white;">Buscador</a>
   		<form class="form-inline">
 			<div class="input-group">
@@ -53,7 +54,7 @@
     			</div>
 			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   		</form>
-	</nav>
+	</nav>-->
 
 </br>
 	{!! $calendar->calendar() !!}
