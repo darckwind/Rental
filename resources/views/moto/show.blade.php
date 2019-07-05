@@ -13,22 +13,22 @@
                         <div class="row">
                             <div class="col-md-9">
                                	<strong>Patente:</strong>
-		                {{ $moto->patente }}
-               			 </br>
-               			<strong>Marca:</strong>
-                		{{ $moto->marca }}
-                		</br>
-                		<strong>Modelo:</strong>
-                		{{ $moto->modelo }}
-                		</br>
-                		<strong>Color:</strong>
-                		{{ $moto->color }}
-                		</br>
-                		<strong>Nro Motor:</strong>
-                		{{ $moto->nro_motor }}
-               			</br>
-                		<strong>Nro Chasis:</strong>
-                		{{ $moto->nro_chasis }}
+                                {{ $moto->patente }}
+                                 </br>
+                                <strong>Marca:</strong>
+                                {{ $moto->marca }}
+                                </br>
+                                <strong>Modelo:</strong>
+                                {{ $moto->modelo }}
+                                </br>
+                                <strong>Color:</strong>
+                                {{ $moto->color }}
+                                </br>
+                                <strong>Nro Motor:</strong>
+                                {{ $moto->nro_motor }}
+                                </br>
+                                <strong>Nro Chasis:</strong>
+                                {{ $moto->nro_chasis }}
                             </div>
                             <div class="col-md-3 row">
 				<img src="/RVM/{{ $moto->RVM }}" alt="" class="col-md-6 img-thumbnail">
@@ -65,12 +65,11 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-9">
-                            <p>patente</p>
-                            <p></p>
-                            <p></p>
+                            <strong>Venc. Revicion:</strong>
+                            {{ $rev->venc_rev }}
                         </div>
                         <div class="col-md-3">
-
+                            <img src="/rev-tec/{{ $moto->RVM }}" alt="" class="col-md-12 img-thumbnail">
                         </div>
                     </div>
                 </div>
