@@ -12,7 +12,7 @@
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">
-                        RVM Info
+                        <h1>RVM Info</h1>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -45,7 +45,9 @@
                 </br>
                 <div class="card">
                     <div class="card-header">
-                        Seguro
+                        <h1>
+                            Seguro
+                        </h1>
                     </div>
                     <div class="card-body">
                         <div class="row">
