@@ -19,6 +19,8 @@
             </ul>
         </div>
     @endif
+
+
     <form action="{{ route('seguro.update',$seguro->patente) }}" method="POST">
         @csrf
         @method('PUT')
@@ -26,7 +28,7 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Patente</label>
             <div class="col-sm-2">
-                <input type="text" readonly class="form-control-plaintext" value="{{ $seguro->patente }}">
+                <input type="text" readonly class="form-control-plaintext" value="{{ $seguro->patente }}" name="patente">
             </div>
             <label class="col-sm-2 col-form-label">Poliza</label>
             <div class="col-sm-2">
