@@ -37,10 +37,6 @@
 					<option>mantencion</option>
 				</select>
 			</div>
-			<label class="col-sm-2 col-form-label">Vencimiento Seguro</label>
-			<div class="col-sm-2">
-				<input type="date" class="form-control" value="{{ $seguro->venc_seg }}" name="venc_seg">
-			</div>
 		</div>
      		<div class="row">
 			<div class="col-sm-12">
