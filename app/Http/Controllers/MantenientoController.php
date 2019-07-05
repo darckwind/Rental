@@ -22,9 +22,9 @@ class MantenientoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        return view('mantenimiento.create',compact('request'));
+        //return view('mantenimiento.create',compact('request'));
     }
 
     /**
@@ -81,5 +81,9 @@ class MantenientoController extends Controller
     public function destroy(Manteniento $manteniento)
     {
         //
+    }
+
+    public  function customCreate(Request $request){
+        return view('mantenimiento.create',compact('request'));
     }
 }

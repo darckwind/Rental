@@ -26,6 +26,8 @@ Route::resource('rent','RentController');
 Route::resource('seguro','SeguroController');
 Route::resource('mantenimiento','MantenientoController');
 
+Route::get('mantenimiento/{rent}','MantenientoController@customCreate');
+
 Route::get('moto/download/{moto}','DownloadController@getRVM')->name('moto.rvm');
 Route::get('moto/downloadSeguro/{moto}','DownloadController@getSeguro')->name('moto.seguro');
 Route::get('moto/downloadRev/{moto}','DownloadController@getRev')->name('moto.rev');
