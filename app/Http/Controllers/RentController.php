@@ -89,8 +89,8 @@ class RentController extends Controller
      */
     public function edit(Rent $rent)
     {
-        return $rent;
-        //return view('rent.edit',compact('rent'));
+
+        return view('rent.edit',compact('rent'));
     }
 
     /**
