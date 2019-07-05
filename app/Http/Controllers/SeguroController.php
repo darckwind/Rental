@@ -74,8 +74,10 @@ class SeguroController extends Controller
             'venc_seg' => 'required'
         ]);
 
+        $seguro->update($request->all());
+
         return redirect()->route('moto.index')
-            ->with('success','Seguro actuaizado');
+            ->with('success',$request);
     }
 
     /**
