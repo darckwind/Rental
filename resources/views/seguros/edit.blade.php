@@ -22,6 +22,15 @@
 
 
     <form>
+
+    </form>
+
+
+
+    <form action="{{ route('seguro.update',$seguro->patente) }}" method="POST">
+        @csrf
+        @method('PUT')
+        <p>{{$seguro}}</p>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Patente</label>
             <div class="col-sm-4">
@@ -35,19 +44,9 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Vencimiento Seguro</label>
             <div class="col-sm-4">
-                <input type="date" class="form-control-plaintext" value="{{ $seguro->venc_seg }}" name="venc_seg">
+                <input type="date" class="form-control" value="{{ $seguro->venc_seg }}" name="venc_seg">
             </div>
         </div>
-    </form>
-
-
-
-    <form action="{{ route('seguro.update',$seguro->patente) }}" method="POST">
-        @csrf
-        @method('PUT')
-        <input type="text" name="patente" value="{{ $seguro->patente }}" class="form-control" placeholder="patente" readonly>
-        <p>{{$seguro}}</p>
-
     </form>
 @endsection
 

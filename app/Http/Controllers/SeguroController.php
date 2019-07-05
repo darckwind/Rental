@@ -69,7 +69,7 @@ class SeguroController extends Controller
      */
     public function update(Request $request, Seguro $seguro)
     {
-        //
+        return $request;
     }
 
     /**
