@@ -16,10 +16,10 @@
             <th>Patente</th>
             <th>Marca</th>
             <th>Modelo</th>
-	    <th>Venc. Seguro</th>
-	    <th>Venc. Rev. Tec.</th>
+			<th>Venc. Seguro</th>
+			<th>Venc. Rev. Tec.</th>
             <th>Accion</th>
-	    <th>Descargas</th>
+			<th>Descargas</th>
         </tr>
         @foreach ($moto as $motos)
         <tr>
@@ -45,7 +45,8 @@
     					Edit
   				</button>
   				<div class="dropdown-menu">
-    					<a class="dropdown-item" href="{{ route('moto.edit',$motos->patente) }}">Moto info</a>
+					<a class="dropdown-item" href="{{ route('moto.edit',$motos->patente) }}">Moto info</a>
+					<a class="dropdown-item" href="{{ route('seguros.edit',$motos->patente) }}">Seguro info</a>
   				</div>
 			</div>
                     <!--<a class="btn btn-primary" href="{{ route('moto.edit',$motos->patente) }}">Edit</a>-->
