@@ -1,6 +1,0 @@
-@extends('moto.app')
-
-
-@section('content')
-{{$data[0]->venc_seg}}
-@endsection

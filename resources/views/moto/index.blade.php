@@ -1,4 +1,4 @@
-@extends('moto.app')
+@extends('/layouts.app')
  
 @section('content')
     <h2>General View</h2>
