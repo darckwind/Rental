@@ -63,7 +63,7 @@
 		</div>
 		<div class="form-group row">
 			<input type="checkbox" name="hotel" class="custom-control-input" id="defaultUnchecked">
-			<label class="col-form-label" for="defaultUnchecked">Has Hotel</label>
+			<label class="custom-control-label" for="defaultUnchecked">Has Hotel</label>
 		</div>
 		<button type="submit" class="btn btn-block btn-primary">Submit</button>
 	</form>
