@@ -29,7 +29,7 @@
                 </div>
                 <label class="col-sm-2 col-form-label">Tipo de uso</label>
                 <div class="col-sm-3">
-                    <select class="form-control" style="height: 32px;" name="arriendo">
+                    <select class="form-control" style="height: 32px;" name="arriendo" >
                         <option>arriendo</option>
                         <option>mantencion</option>
                     </select>
@@ -39,25 +39,25 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Pick Up:</label>
                 <div class="col-sm-3">
-                    <input type="date" name="rent_in" class="form-control">
+                    <input type="date" name="rent_in" class="form-control" value="{{$rent->rent_in}}">
                 </div>
                 <label class="col-sm-2 col-form-label">Pick Up Location:</label>
                 <div class="col-sm-3">
-                    <input type="text" name="location" class="form-control">
+                    <input type="text" name="location" class="form-control" value="{{$rent->location}}">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Drop Off:</label>
                 <div class="col-sm-3">
-                    <input type="date" name="rent_out" class="form-control">
+                    <input type="date" name="rent_out" class="form-control" value="{{$rent->rent_out}}">
                 </div>
                 <label class="col-sm-2 col-form-label">Arrendado a:</label>
                 <div class="col-sm-3">
-                    <input type="text" name="rent_to" class="form-control">
+                    <input type="text" name="rent_to" class="form-control" value="{{$rent->rent_to}}">
                 </div>
                 <div class="col-sm-2">
-                    <input type="checkbox" name="hotel" class="custom-control-input" id="defaultUnchecked">
+                    <input type="checkbox" name="hotel" class="custom-control-input" value="{{$rent->hotel}}">
                     <label class="custom-control-label" for="defaultUnchecked">Has Hotel</label>
                 </div>
             </div>
