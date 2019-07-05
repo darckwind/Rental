@@ -4,10 +4,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Agregar nuevo arriendo</h2>
-        </div>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('moto.index') }}"> Back</a>
+            <h2>Nuevo arriendo</h2>
         </div>
     </div>
 </div>
@@ -24,16 +21,33 @@
 <div class="container">
 	<form action="{{ route('rent.store') }}" method="POST">
     		@csrf
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Patente</label>
+			<div class="col-sm-2">
+				<select name="patente" class="form-control" style="height: 32px;">
+					@foreach ($rent as $rents)
+						<option >{{$rents->patente}}</option>
+					@endforeach
+				</select>
+			</div>
+			<label class="col-sm-2 col-form-label">Tipo de uso</label>
+			<div class="col-sm-2">
+				<select class="form-control" style="height: 32px;" name="arriendo">
+					<option>arriendo</option>
+					<option>mantencion</option>
+				</select>
+			</div>
+			<label class="col-sm-2 col-form-label">Vencimiento Seguro</label>
+			<div class="col-sm-2">
+				<input type="date" class="form-control" value="{{ $seguro->venc_seg }}" name="venc_seg">
+			</div>
+		</div>
      		<div class="row">
 			<div class="col-sm-12">
         			<div class="  col-md-6">
             				<div class="form-group">
 						<strong>patente:</strong>
-						<select name="patente" class="form-control" style="height: 32px;">
-                					@foreach ($rent as $rents)
-                    						<option >{{$rents->patente}}</option>
-                					@endforeach
-                				</select>
+
             				</div>
         			</div>
 				<div class="col-md-6">

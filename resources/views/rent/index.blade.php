@@ -4,10 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>lista de motos disponibles</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('moto.create') }}"> Add new</a>
+                <h2>lista de arriendos</h2>
             </div>
         </div>
     </div>
@@ -35,8 +32,8 @@
             <td>{{ $motos->marca }}</td>
             <td>{{ $motos->modelo}}</td>
             <td>{{ $motos->venc_per}}</td>
-	    <td>{{ $motos->venc_seg}}</td>
-	    <td>{{ $motos->venc_rev}}</td>
+            <td>{{ $motos->venc_seg}}</td>
+            <td>{{ $motos->venc_rev}}</td>
             <td>
                 <form action="{{ route('moto.destroy',$motos->patente) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('moto.show',$motos->patente) }}">Show</a>

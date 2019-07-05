@@ -24,7 +24,6 @@
     <form action="{{ route('seguro.update',$seguro->patente) }}" method="POST">
         @csrf
         @method('PUT')
-        <p>{{$seguro}}</p>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Patente</label>
             <div class="col-sm-2">
