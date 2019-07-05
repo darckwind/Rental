@@ -4,10 +4,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Agregar nueva moto</h2>
-        </div>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('home') }}"> Back</a>
+            <h2>Mantencion</h2>
         </div>
     </div>
 </div>
@@ -22,148 +19,53 @@
         </ul>
     </div>
 @endif
-   
-<form action="{{ route('mantencion.store') }}" method="POST" enctype="multipart/form-data">
+
+<form action="{{ route('rent.store') }}" method="POST">
     @csrf
-     <div class="row">
-        <div class="  col-md-6">
-            <div class="form-group">
-                <strong>patente:</strong>
-                <input type="text" name="patente" class="form-control" placeholder="patente">
-            </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Patente</label>
+        <div class="col-sm-3">
+            <select name="patente" class="form-control" style="height: 32px;">
+                @foreach ($rent as $rents)
+                    <option >{{$rents->patente}}</option>
+                @endforeach
+            </select>
         </div>
-        <div class="  col-md-6">
-            <div class="form-group">
-                <strong>kilometraje:</strong>
-                <input type="number" name="marca" class="form-control" placeholder="km">
-            </div>
-        </div>
-        <div class="  col-md-6">
-            <div class="form-group">
-                <strong>modelo:</strong>
-                <input type="text" name="modelo" class="form-control" placeholder="modelo">
-            </div>
-        </div>
-        <div class="  col-md-6">
-            <div class="form-group">
-                <strong>color:</strong>
-                <input type="text" name="color" class="form-control" placeholder="color">
-            </div>
-        </div>
-        <div class="  col-md-6">
-            <div class="form-group">
-                <strong>nro_motor:</strong>
-                <input type="text" name="nro_motor" class="form-control" placeholder="nro_motor">
-            </div>
-        </div>
-        <div class="  col-md-6">
-            <div class="form-group">
-                <strong>nro_chasis:</strong>
-                <input type="text" name="nro_chasis" class="form-control" placeholder="nro_motor">
-            </div>
-        </div>
-        <div class="col-md-10">
-            <div class="form-group">
-                <strong>RVM:</strong>
-                <input type="file" id="path-rvm" name="RVM">
-            </div>
-            <img class="col-md-2" src="" id="rvm" alt="">
-        </div>
-        <div class="  col-md-6">
-            <div class="form-group">
-                <strong>Vencimiento Permiso circulacion:</strong>
-                <input type="date" name="venc_per" class="form-control" placeholder="">
-            </div>
-        </div>
-        <div class="col-md-10">
-            <div class="form-group">
-                <strong>permiso circulacion:</strong>
-                <input type="file" id="path-per" name="img_per">
-            </div>
-            <img class="col-md-2" src="" id="per" alt="">
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <strong>Poliza:</strong>
-                <input type="text" name="poliza" class="form-control" placeholder="poliza">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <strong>Vencimiento:</strong>
-                <input type="date" name="venc_seg" class="form-control" placeholder="">
-            </div>
-        </div>
-        <div class="  col-md-12">
-            <div class="form-group">
-                <strong>Seguro:</strong>
-                <input type="file" id="path-seg"name="img_seg">
-            </div>
-            <img class="col-md-2" src="" id="seg" alt="">
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <strong>Fecha Vencimiento:</strong>
-                <input type="date" name="venc_rev" class="form-control" placeholder="">
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="form-group">
-                <strong>Revicion:</strong>
-                <input type="file" id="path-rev"name="img_rev">
-            </div>
-            <img class="col-md-2" src="" id="rev" alt="">
-        </div>
-        <div class="col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+        <label class="col-sm-2 col-form-label">Tipo de uso</label>
+        <div class="col-sm-3">
+            <select class="form-control" style="height: 32px;" name="arriendo">
+                <option>arriendo</option>
+                <option>mantencion</option>
+            </select>
         </div>
     </div>
-   
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Pick Up:</label>
+        <div class="col-sm-3">
+            <input type="date" name="rent_in" class="form-control">
+        </div>
+        <label class="col-sm-2 col-form-label">Pick Up Location:</label>
+        <div class="col-sm-3">
+            <input type="text" name="location" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Drop Off:</label>
+        <div class="col-sm-3">
+            <input type="date" name="rent_out" class="form-control">
+        </div>
+        <label class="col-sm-2 col-form-label">Arrendado a:</label>
+        <div class="col-sm-3">
+            <input type="text" name="rent_to" class="form-control">
+        </div>
+        <div class="col-sm-2">
+            <input type="checkbox" name="hotel" class="custom-control-input" id="defaultUnchecked">
+            <label class="custom-control-label" for="defaultUnchecked">Has Hotel</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-block btn-primary">Submit</button>
 </form>
-<script>
-document.getElementById("path-rvm").onchange = function () {
-    var reader = new FileReader();
 
-    reader.onload = function (e) {
-        // get loaded data and render thumbnail.
-        document.getElementById("rvm").src = e.target.result;
-    };
-
-    // read the image file as a data URL.
-    reader.readAsDataURL(this.files[0]);
-};
-document.getElementById("path-seg").onchange = function () {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-        // get loaded data and render thumbnail.
-        document.getElementById("seg").src = e.target.result;
-    };
-
-    // read the image file as a data URL.
-    reader.readAsDataURL(this.files[0]);
-};
-document.getElementById("path-rev").onchange = function () {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-        // get loaded data and render thumbnail.
-        document.getElementById("rev").src = e.target.result;
-    };
-
-    // read the image file as a data URL.
-    reader.readAsDataURL(this.files[0]);
-};
-document.getElementById("path-per").onchange = function () {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-        // get loaded data and render thumbnail.
-        document.getElementById("per").src = e.target.result;
-    };
-
-    // read the image file as a data URL.
-    reader.readAsDataURL(this.files[0]);
-};
-</script>
 @endsection
