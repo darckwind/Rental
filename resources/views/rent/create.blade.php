@@ -56,17 +56,13 @@
 				<input type="date" name="rent_out" class="form-control">
 			</div>
 			<label class="col-sm-2 col-form-label">Arrendado a:</label>
-			<div class="col-sm-2">
+			<div class="col-sm-3">
 				<input type="text" name="rent_to" class="form-control">
 			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-2">
 				<input type="checkbox" name="hotel" class="custom-control-input" id="defaultUnchecked">
 				<label class="custom-control-label" for="defaultUnchecked">Has Hotel</label>
 			</div>
-
-		</div>
-		<div class="form-group row">
-
 		</div>
 		<button type="submit" class="btn btn-block btn-primary">Submit</button>
 	</form>
