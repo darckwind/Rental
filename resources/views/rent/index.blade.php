@@ -2,8 +2,8 @@
  
 @section('content')
 
-  @foreach ($moto as $motos)
-      <p>{{$rent->patente}}</p>
+  @foreach ($rent as $rents)
+      <p>{{$rents->patente}}</p>
   @endforeach
 @endsection
 
