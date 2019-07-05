@@ -23,22 +23,19 @@
 
     <form>
         <div class="form-group row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Patente</label>
+            <label class="col-sm-2 col-form-label">Patente</label>
             <div class="col-sm-4">
                 <input type="text" readonly class="form-control-plaintext" value="{{ $seguro->patente }}" name="patente">
             </div>
-            <label for="staticEmail" class="col-sm-2 col-form-label">Poliza</label>
+            <label class="col-sm-2 col-form-label">Poliza</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" value="{{ $seguro->poliza }}" name="patente">
+                <input type="text" class="form-control" value="{{ $seguro->poliza }}" name="poliza">
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-10">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Patente</label>
-                <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ $seguro->patente }}" name="patente">
-                </div>
+            <label class="col-sm-2 col-form-label">Vencimiento Seguro</label>
+            <div class="col-sm-4">
+                <input type="date" class="form-control-plaintext" value="{{ $seguro->venc_seg }}" name="venc_seg">
             </div>
         </div>
     </form>
