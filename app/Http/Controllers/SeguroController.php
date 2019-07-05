@@ -70,7 +70,6 @@ class SeguroController extends Controller
     public function update(Request $request, Seguro $seguro)
     {
         $request->validate([
-            'patente' => 'required',
             'poliza' => 'required',
             'venc_seg' => 'required'
         ]);
