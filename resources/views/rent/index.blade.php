@@ -13,7 +13,7 @@
             <th>status</th>
             <th>hotel</th>
         </tr>
-
+        @foreach ($rent as $rents)
         <tr>
             <td>{{ $rents->id }}</td>
             <td>{{ $rents->patente }}</td>
@@ -31,6 +31,8 @@
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </td>
+        </tr>
+        @endforeach
     </table>
 @endsection
 
