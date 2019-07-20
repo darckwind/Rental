@@ -24,7 +24,7 @@ class MantenientoController extends Controller
      */
     public function create()
     {
-        //return view('mantenimiento.create',compact('request'));
+        return view('mantenimiento.create',compact('request'));
     }
 
     /**
