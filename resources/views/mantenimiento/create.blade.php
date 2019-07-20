@@ -20,52 +20,154 @@
     </div>
 @endif
 
-<form action="{{ route('rent.store') }}" method="POST">
-    @csrf
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Patente</label>
-        <div class="col-sm-3">
-            <select name="patente" class="form-control" style="height: 32px;">
-                @foreach ($rent as $rents)
-                    <option >{{$rents->patente}}</option>
-                @endforeach
-            </select>
-        </div>
-        <label class="col-sm-2 col-form-label">Tipo de uso</label>
-        <div class="col-sm-3">
-            <select class="form-control" style="height: 32px;" name="arriendo">
-                <option>arriendo</option>
-                <option>mantencion</option>
-            </select>
-        </div>
-    </div>
+<div class="container">
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                        Mantencion anterior
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>Kilometraje: </td>
+                            <td>Nivel de Aceite: </td>
+                            <td>Estado de cadena: </td>
+                            <td>Nivel de refrigerante: </td>
+                        </tr>
+                        <tr>
+                            <td>Nivel liq. frenos:</td>
+                            <td>Freno Delantero:</td>
+                            <td>Freno Tracero:</td>
+                            <td>Bateria:</td>
+                        </tr>
+                        <tr>
+                            <td>Salida 12V:</td>
+                            <td>Puños calefactables:</td>
+                            <td>Nivel combustible:</td>
+                            <td>Luces:</td>
+                        </tr>
+                        <tr>
+                            <td>Notas adicionales:</td>
+                        </tr>
+                        </tbody>
 
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Pick Up:</label>
-        <div class="col-sm-3">
-            <input type="date" name="rent_in" class="form-control">
+                    </table>
+                </div>
+            </div>
         </div>
-        <label class="col-sm-2 col-form-label">Pick Up Location:</label>
-        <div class="col-sm-3">
-            <input type="text" name="location" class="form-control">
+        <br>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                        Nueva Mantencion
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="inputEmail4">Kilomentraje</label>
+                                <input type="number" class="form-control" id="inputEmail4" placeholder="99999">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Nivel de Aceite</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Repostado</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Estado de cadena</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Remplazada</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Nivel de refrigerante</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Repostado</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Nivel liq. frenos</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Repostado</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Freno Delantero</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Remplazado</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Freno Tracero</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Remplazado</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Bateria</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Remplazada</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Salida 12 V</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Remplazada</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Puños calefactables</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Remplazado</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Nivel Combustible</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Repostado</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputPassword4">Luces</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Mantiene anterior</option>
+                                    <option>Remplazada</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="inputPassword4">notas adicionales</label>
+                                <textarea class="form-control" placeholder="datos adicionales"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-block btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Drop Off:</label>
-        <div class="col-sm-3">
-            <input type="date" name="rent_out" class="form-control">
-        </div>
-        <label class="col-sm-2 col-form-label">Arrendado a:</label>
-        <div class="col-sm-3">
-            <input type="text" name="rent_to" class="form-control">
-        </div>
-        <div class="col-sm-2">
-            <input type="checkbox" name="hotel" class="custom-control-input" id="defaultUnchecked">
-            <label class="custom-control-label" for="defaultUnchecked">Has Hotel</label>
-        </div>
-    </div>
-    <button type="submit" class="btn btn-block btn-primary">Submit</button>
-</form>
+</div>
 
 @endsection
